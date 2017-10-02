@@ -1,0 +1,11 @@
+jQuery           - https://jquery.com/
+jQuery-ui        - https://jqueryui.com/
+Bootstrap        - https://github.com/twbs/bootstrap
+Bootstrap-Switch - https://github.com/nostalgiaz/bootstrap-switch
+Toastr           - https://github.com/CodeSeven/toastr
+Inputmask        - https://github.com/RobinHerbots/jquery.inputmask
+Mousetrap        - https://github.com/ccampbell/mousetrap
+Spectrum         - https://github.com/bgrins/spectrum
+jQuery Tooltip   - https://github.com/jquerytools/jquerytools
+Diff             - https://github.com/flitbit/diff
+Arrive           - https://github.com/uzairfarooq/arrive

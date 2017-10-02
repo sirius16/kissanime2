@@ -1,0 +1,56 @@
+#navsubbar {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_subnavbar_bg.gif") repeat-x !important;
+}
+
+.barTitle {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_box_bar.gif") repeat-x !important;
+}
+
+#navbar a {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_navbar_btn.gif") no-repeat left top !important;
+    background-position: 0% -27px !important;
+}
+
+#navbar #currentTab {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_navbar_btn.gif") no-repeat left top !important;
+}
+
+#navbar a:hover {
+	background: ur("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_navbar_btn.gif") no-repeat left top !important;
+    background-position: 0% -54px !important;
+}
+
+.prev {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/button-left.gif") !important;
+}
+
+.next {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/button-right.gif") !important;
+}
+
+.prev:hover {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/button-left-over.gif") !important;
+}
+
+.next:hover {
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/button-right-over.gif") !important;
+}
+
+.arrow-general {
+	background: transparent url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_box_arrow.gif") no-repeat top left !important;
+}
+
+#tabmenucontainer a {
+	background: transparent url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_tabs_btn.gif") no-repeat left top !important;
+	background-position: 0% -25px !important;
+}
+
+#tabmenucontainer a:hover {
+	background: transparent url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_tabs_btn.gif") no-repeat left top !important;
+	background-position: 0% -50px !important;
+}
+
+#tabmenucontainer .tabactive {
+	background: transparent url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_tabs_btn.gif") no-repeat left top !important;
+	background-position: 0% 0px !important;
+}

@@ -1,0 +1,56 @@
+.KEPad {
+	padding-right: 40px;
+}
+.KEImg { 
+	vertical-align: sub;
+	margin-right: 5px;
+	height: 16px;
+	border-radius: 2px 2px 2px 2px;
+}
+.KEHide {
+	display: none !important;
+}
+.KEDropdown {
+	background: rgba(22, 22, 22, 0.5) !important;
+    border: 1px solid grey;
+    font-size: 12px;
+	vertical-align: baseline;
+	color: white;
+	height: 22px;
+}
+.KEDropdown option {
+	background: #111111;
+}
+.KETextInput {
+	background: none;
+    border: none;
+    width: 25px;
+	color: white;
+	text-align: center;
+}
+
+#userDate {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+button {
+	cursor: pointer;
+}
+
+#episodesUserCurrentText::-webkit-inner-spin-button, #episodesUserCurrentText::-webkit-outer-spin-button {
+	display: none;
+}
+
+#episodesUserCurrentText:focus::-webkit-inner-spin-button, #episodesUserCurrentText:focus::-webkit-outer-spin-button {
+	display: initial;
+}
+
+.ui-selecting {
+	background: #2f2f2f;
+}
+.ui-selected {
+	background: #2f2f2f;
+}

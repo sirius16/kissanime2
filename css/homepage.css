@@ -1,0 +1,244 @@
+/* == Random Anime Banner == */
+.banner {
+	width: 734px !important;
+	background: #353636 !important;
+}
+
+/* == Welcome and Pinned Box Styling == */
+#WelcomeBox, #PinnedBox {
+	border: 1px solid #2f2f2f;
+	text-align: left;
+	padding: 2px;
+	width: 213px;
+	background: #111111;
+	margin-bottom: 10px;
+}
+#WelcomeBoxTitle, #PinnedBoxTitle {
+	height: 25px;
+	padding-left: 10px;
+	background: url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_box_bar.gif") repeat-x;
+	font: normal 17px/23px "Tahoma",Arial,Helvetica,sans-serif;
+	letter-spacing: -1px;
+	color: #fff;
+}
+#WelcomeBoxContent, #PinnedBoxContent {
+	padding: 10px;
+	margin-top: 2px;
+	background: transparent url("chrome-extension://__MSG_@@extension_id__/images/KissAnimeImageAssets/tpl_box_shading2.png") repeat-x;
+}
+#WelcomeBoxText { text-align: center; }
+#PinnedList { margin-top: -5px; }
+
+/* == Edit Button for Pinned Box == */
+#editPinned {
+	float: right;
+	margin-right: 5px;
+	font-size: 12px;
+	cursor: pointer;
+}
+#editPinned:hover { color: #648f06; }
+
+/* == Alt Pinned Box Styling == */
+
+.altPinnedBox {
+	width: 100% !important;
+}
+.altPinnedList {
+	display: none;
+	padding-bottom: 10px;
+	width: 710px;
+	overflow-x: auto;
+}
+.altPinnedList::-webkit-scrollbar {
+	height: 10px;
+}
+.altPinnedList::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+	border-radius: 10px;
+	background: #1F1F1F;
+}
+.altPinnedList::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    /* background: rgb(165,165,165);  */
+    background: rgb(35, 35, 35);
+	border: 1px solid grey;
+}
+
+.altPinnedItem {
+	width: 130px;
+	height: auto;
+	text-align: center;
+	/* padding: 0px 7.5px; */
+	padding: 0px 3.5px;
+	float: left;
+	overflow:hidden;
+}
+
+.altPinnedImg {
+	border: 1px solid #313031;
+	width: 100%;
+	height: 171px;
+}
+
+.altPinnedImg:hover {
+	border: 1px solid #c62400;
+}
+
+.overlay {
+	transition: all 0.3s ease;
+	position: absolute;
+    width: 130px;
+    height: 171px;
+    padding: 1px;
+	background: none;
+}
+
+.overlay .glyphicon {
+	margin: 0 2px;
+}
+
+.overlay:hover {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay > * {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+.overlay:hover > * {
+	opacity: 1;
+	visibility: visible;
+}
+
+.overlay .glyphicon:hover:after {
+	font-family: 'Roboto';
+	content: attr(data-text);
+	font-size: 14px;
+	color: white;
+	position: absolute;
+	width: 130px;
+}
+
+.overlay .manageBookmark:hover:after {
+    top: 70px;
+    left: -68px;
+}
+
+.overlay .loading-pulse {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.redditLinks {
+	position: absolute;
+	bottom: 2px;
+	width: 100%;
+}
+
+.redditLinks img {
+	height: 35px;
+	transition: all 0.3s;
+	-webkit-filter: invert(100%);
+}
+
+.redditLinks img:hover {
+	-webkit-filter: invert(80%);
+}
+
+.redditLinks img:hover:after {
+	content: 'Reddit Discussions';
+	font-family: 'Roboto';
+	position: absolute;
+	color: white;
+	font-size: 14px;
+	width: 130px;
+
+}
+
+.altPinnedRemove {
+	display:none;
+	margin-bottom: 10px;
+}
+.altPinnedRemove:hover {
+	-webkit-filter: invert(100%);
+}
+/* Progress Bar Theme */
+.ui-progressbar {
+	height: 1em !important;
+	width: 500px;
+	margin: auto;
+}
+.ui-widget-content {
+	background: rgb(35, 35, 35) !important;
+}
+.ui-widget-header {
+	background: #f6a828 url("chrome-extension://__MSG_@@extension_id__/images/pbar-ani.gif") 50% 50% repeat-x !important;
+}
+.ui-progressbar-value {
+	transition: width 0.3s;
+}
+
+/* Sortable Placeholder */
+.ui-state-highlight {
+	padding-right: 137px;
+	background: rgba(19,19,19,0.50) !important;
+}
+
+
+
+
+.PinnedLatestEpisode, .PinnedLW {
+	color: skyblue !important;
+}
+.PinnedLatestEpisode:visited {
+	color: #888888 !important;
+}
+
+.PinnedLatestEpisode:hover, .PinnedLW:hover {
+	color: #648f06 !important;
+}
+
+/* Empty Pinned list Message */
+#emptyPinnedList { display: none; }
+
+/* == Alt Latest Update == */
+#recent-updates {
+	padding: 10px;
+	margin-top: 2px;
+	background: url('/Content/images/tpl_box_shading2.png') repeat-x;
+}
+.refresh-recents {
+	float: right;
+	position: relative;
+	top: 2px;
+	right: 5px;
+	cursor: pointer;
+}
+#status {
+	float: right;
+	position: relative;
+	right: 10px;
+	font-size: 13px;
+	letter-spacing:0px;
+	text-shadow: 1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,0px 1px 0 #000,1px 0px 0 #000,0px -1px 0 #000,-1px 0px 0 #000;
+}
+.listing tr:nth-child(odd) td { background: none repeat scroll 0 0 #161616; }
+
+/* == Footer == */
+#footer {
+	position: relative;
+	bottom: 0px;
+	left: 0px;
+	z-index: 5;
+}
+#footcontainer {
+	position: static;
+	bottom: 0px;
+}

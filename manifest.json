@@ -1,0 +1,70 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jquery/jquery.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "css/jquery-ui.css", "css/jquery-ui.structure.css", "css/jquery-ui.theme.css", "css/toastr.min.css", "css/ImagesCache.css", "css/glyphicons.css", "css/global.css" ],
+      "js": [ "js/jquery/jquery.js", "js/jquery/jquery-ui.js", "js/misc.js", "js/js/mousetrap.min.js", "js/js/mousetrap-record.min.js", "/js/js/jquery.mousewheel.min.js", "js/js/toastr.min.js", "js/js/arrive.min.js", "js/main.js" ],
+      "matches": [ "*://*.kissanime.ru/*", "*://*.kimcartoon.me/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/homepage.css" ],
+      "js": [ "js/js/jquery17.min.js", "js/js/jqueryTooltip.js", "js/homepage.js" ],
+      "matches": [ "*://*.kissanime.ru/", "*://*.kimcartoon.me/" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": ["js/kimcartoon/aes.js","js/kimcartoon/common.js","js/kimcartoon/sha256.min.js","js/kimcartoon/jquery.allofthelights-min.js","js/kimcartoon/kimplayer.js","js/kimcartoon/oran.min.js"],
+      "matches": [ "*://*.kimcartoon.me/Cartoon/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "js/jquery.tablesorter.js","js/AnimeInfo.js" ],
+      "matches": [ "*://*.kissanime.ru/Anime/*", "*://*.kimcartoon.me/Cartoon/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/videopage.css", "js/videojs/video-js.css" ],
+      "js": [ "js/js/jquery.inputmask.bundle.js", "js/js/asp.js", "js/videopage.js" ],
+      "matches": [ "*://*.kissanime.ru/Anime/*/*", "*://*.kimcartoon.me/Cartoon/*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "css/jquery-ui.css", "css/jquery-ui.structure.css", "css/jquery-ui.theme.css" ],
+      "js": [ "js/jquery/jquery.js", "js/jquery/jquery-ui.js", "js/misc.js", "js/openload.js" ],
+      "matches": [ "https://*.openload.co/embed/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "js/bookmarkspage.js" ],
+      "matches": [ "*://*.kissanime.ru/BookmarkList*", "*://*.kimcartoon.me/BookmarkList*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Adds the ability to toggle on/off certain elements on KissAnime such as Ads and Social Media buttons as well as adding new features.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlblcqMXFuHoIkrFZQK9+3/3K9F6OlA9RRwdNLqh5U6ylvXU1l2xrIevLPOp4srUPgt7KWXGZwvzeghj6yeI3tjseJznMrjlmTb0Uz8kPkc+CwViV57W9pujI56IHCri6idL4upBuvx+cf0eI/TKQSbqvjtX2EWaWadnKQ1Q0qu5kZ0dyOAaPTBWCL2Vn6xmEFkUEexVLMW8BeQxgVinlScYCL9FCUvVJOsoqmlzOwGS1BzF3IGZKkh15TkwO43KjDFmzH2BX1zSkNaVlTLU4ytIv+QjxhhA/FUhytt8GQeJoirwvZVanUYbdnLkEFPWjUPQTlEIN952Ax0DvScJ1hQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "45.0.2454",
+   "name": "Essentials for KissAnime",
+   "optional_permissions": [ "*://*.myanimelist.net/*", "downloads", "\u003Call_urls>" ],
+   "options_page": "options.html",
+   "options_ui": {
+      "chrome_style": false,
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "*://*.kissanime.ru/*", "*://*.kimcartoon.me/*", "*://*.openload.co/embed/*", "cookies", "activeTab", "storage", "notifications", "webRequest", "webRequestBlocking", "downloads", "clipboardRead","clipboardWrite" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2017.1.3.2",
+   "version_name": "v2017.1.3.1",
+   "web_accessible_resources": [ "options.html", "fonts/*", "images/*", "InjectedHTML/*", "InjectedCSS/*", "css/global.css", "js/*" ]
+}

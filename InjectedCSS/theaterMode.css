@@ -1,0 +1,37 @@
+#centerDivVideo {
+	transition: width 1s, heigth 1s;
+}
+
+#container {
+	width: 100% !important;
+}
+
+.barContent {
+	padding: 0;
+	/* background: black !important; */
+}
+
+#centerDivVideo {
+	width: 75% !important;
+	height: 100% !important;
+}
+
+#divContentVideo {
+	width: 100% !important;
+    height: 100% !important;
+}
+
+#my_video_1,
+#embedVideo,
+#divContentVideo_wrapper,
+#divContentVideo iframe {
+	margin: auto;
+	width: 100% !important;
+	height: calc( 75vw / 1.792 ) !important;
+}
+
+/* Fullscreen Fix */
+#my_video_1:-webkit-full-screen {
+	height: 100% !important;
+	width: 100% !important;
+}

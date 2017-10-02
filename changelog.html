@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Changelog - Essentials for KissAnime</title>
+		<script src="js/jquery/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap-switch.min.css">
+		<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap-toastr.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-options-page.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="navbar-brand"><a href="https://kissanime.to/"><img src="icon.png" class="brand-image pull-left"></a></span>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/options.html">Options</a></li>
+						<li class="active"><a id="version" href="/changelog.html">Changelog</a></li>
+						<li><a id="info" href="/Info.html">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="loading" style="text-align:center"><div style="font-size:16px">Loading. Please Wait.</div><br><img style="height:50px" src="images/loading.gif"></div>
+		<div class="container" id="container" style="display:none"></div>
+		<script src="js/loadchangelog.js"></script>
+		<script src="js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/bootstrap/js/bootstrap-switch.min.js"></script>
+		<script src="js/bootstrap/js/bootstrap-toastr.min.js"></script>
+		<script src="js/bootstrap/js/bootstrap-main.js"></script>
+	</body>
+</html>
