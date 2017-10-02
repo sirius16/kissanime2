@@ -843,8 +843,7 @@ $kissenc.setSecretKey(localStorage.secretkey);					// (chainScripts = scripts =>
 										var wra = $kissenc.decrypt(data.match(/decrypt.*"\);/)[0].slice(9,-3));
 								console.log(!wra)
 										if (!wra)
-										$("<iframe>",{id: "key", src: "http://kimcartoon.me/Cartoon/Alvinnn-And-the-Chipmunks-Season-3/Episode-2?id=75722",load:function(){localStorage.secretkey=key.contentWindow.$kissenc.getSecretKey();key.remove();status('<div style="color:gold">Retrying...</div>');setTimeout(function(){doRequest();},2000);}}).appendTo("body");
-										
+$("<iframe>",{id:"key",src:"http://kimcartoon.me/Cartoon/Alvinnn-And-the-Chipmunks-Season-3/Episode-2?id=75722",load:function(){$kissenc.setSecretKey(localStorage.secretkey);key.remove();status('<div style="color:gold">Retrying...</div>');setTimeout(function(){doRequest();},2000);}}).appendTo("body");										
 										var DownloadContainer = new DOMParser().parseFromString(wra,"text/html").body
 									}
 									 else 
