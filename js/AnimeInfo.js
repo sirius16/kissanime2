@@ -843,7 +843,7 @@ $kissenc.setSecretKey(localStorage.secretkey);					// (chainScripts = scripts =>
 										var wra = $kissenc.decrypt(data.match(/decrypt.*"\);/)[0].slice(9,-3));
 								console.log(!wra)
 										if (!wra)
-$("<iframe>",{id:"key",src:"http://kimcartoon.me/Cartoon/Alvinnn-And-the-Chipmunks-Season-3/Episode-2?id=75722",load:function(){$kissenc.setSecretKey(localStorage.secretkey);key.remove();status('<div style="color:gold">Retrying...</div>');setTimeout(function(){doRequest();},2000);}}).appendTo("body");										
+$("<iframe>",{id:"key",src:"http://kimcartoon.me/Cartoon/Alvinnn-And-the-Chipmunks-Season-3/Episode-2?id=75722",load:function(){key.remove();status('<div style="color:gold">Retrying...</div>');setTimeout(function(){$kissenc.setSecretKey(localStorage.secretkey);doRequest();},2000);}}).appendTo("body");										
 										var DownloadContainer = new DOMParser().parseFromString(wra,"text/html").body
 									}
 									 else 
@@ -1084,8 +1084,15 @@ $("<iframe>",{id:"key",src:"http://kimcartoon.me/Cartoon/Alvinnn-And-the-Chipmun
 						}
 						console.log(downloads);
 						wgetDownload = "";
-						for (i of downloads)
+						list="";
+						for (i of downloads) {
 						wgetDownload += 'wget -t0 -c -b -O "' + i.filename + '" "' + i.url + '" --no-check-certificate\n'
+						list += `packageName=${i.filename.split(".")[0]}
+filename=${i.filename}
+text=${i.url}
+deepAnalyseEnabled=true
+`
+						}
 						// $("<textarea>")
 						chrome.storage.local.get("download", r => {
 							download = r.download || {};
@@ -1095,7 +1102,8 @@ $("<iframe>",{id:"key",src:"http://kimcartoon.me/Cartoon/Alvinnn-And-the-Chipmun
 							chrome.storage.sync.set(r);
 						})
 						
-						$("<textarea>",{text:wgetDownload}).appendTo("body")[0].select();document.execCommand("copy")
+						$("<textarea>",{text:wgetDownload}).appendTo("body")[0].select();document.execCommand("copy");
+						$("<a>",{download:new Date().toLocaleString()+".crawljob",href:"data:text/plain;charset=utf-8,"+encodeURIComponent(list)})[0].click()
 						chrome.runtime.sendMessage({
 							'task': 'dsownloadAll',
 							'data': []
